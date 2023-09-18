@@ -1,0 +1,23 @@
+@height: 268px;
+
+.map-box {
+  width: 100%;
+  height: @height;
+  margin-top: 12px;
+
+  & > div {
+    &:first-child {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  .map-search-panel {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 30%;
+    height: @height;
+    overflow: auto;
+  }
+}

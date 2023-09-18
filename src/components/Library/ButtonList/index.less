@@ -1,0 +1,93 @@
+/* stylelint-disable no-duplicate-selectors */
+
+@import '~antd/lib/style/themes/default.less';
+
+.descriptionWrapper {
+  display: flex;
+  align-items: center;
+
+  > i {
+    cursor: pointer;
+  }
+}
+
+.align-left {
+  justify-content: flex-start;
+}
+
+.align-center {
+  justify-content: center;
+}
+
+.align-right {
+  justify-content: flex-end;
+}
+
+:global {
+  .ant-button-list {
+    display: flex;
+    align-items: center;
+
+    .ant-btn {
+      margin-right: 8px;
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+
+    &.is-link {
+      display: flex;
+
+      .ant-btn-sm {
+        padding: 0 4px;
+      }
+
+      .ant-btn {
+        margin-right: 0;
+        padding: 0 6px;
+      }
+    }
+
+    &__divider {
+      position: relative;
+      margin-right: 2px !important;
+
+      &::after {
+        position: absolute;
+        top: 22%;
+        right: -3px;
+        width: 1px;
+        height: calc(100% - 34%);
+        background-color: #ebebeb;
+        content: '';
+      }
+
+      &:last-child {
+        margin-right: 0;
+
+        &::after {
+          display: none;
+        }
+      }
+    }
+
+    // @see https://github.com/ant-design/ant-design/blob/master/components/button/style/mixin.less
+
+    &__button-danger {
+      color: @error-color;
+
+      &:hover {
+        color: color(~`colorPalette('@{error-color}', 5) `);
+      }
+    }
+
+    &__button-default {
+      color: @btn-default-color;
+
+      &:hover {
+        color: color(~`colorPalette('@{btn-default-color}', 5) `);
+      }
+    }
+  }
+}

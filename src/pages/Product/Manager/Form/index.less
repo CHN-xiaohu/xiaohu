@@ -1,0 +1,136 @@
+@import '~antd/lib/style/themes/default.less';
+
+.wrapper {
+  width: 100%;
+
+  :global {
+    .ant-col-19 {
+      max-width: 100%;
+    }
+  }
+}
+
+.uploadImage {
+  margin-top: 18px;
+}
+
+.formItem {
+  :global {
+    .ant-form-item-label {
+      max-width: 10.13333333% !important;
+    }
+
+    .video-js.vjs-fluid {
+      box-shadow: 0 0 2px rgba(0, 0, 0, 0.15);
+    }
+
+    .vjs-theme-sea .vjs-big-play-button {
+      width: 73px;
+      height: 39px;
+      margin: -20px auto 0 -39.5px;
+      line-height: 39px;
+    }
+  }
+}
+
+:global {
+  .switch-group-wrapper {
+    display: flex;
+    margin-bottom: -10px;
+
+    .ant-form-item {
+      display: flex;
+      margin-right: 30px;
+
+      .ant-col:first-child {
+        flex: 1 0 auto;
+        max-width: 100%;
+      }
+    }
+  }
+
+  .product-category-container {
+    // .ant-card-body {
+    //   padding: 16px;
+    // }
+
+    .product-category__column-select {
+      height: 424px;
+      margin: 10px;
+      margin-bottom: -12px;
+    }
+  }
+
+  .product-detail-container {
+    .ant-form-item-control {
+      display: flex;
+      justify-content: center;
+    }
+  }
+
+  .product-price__input-number--wrapper {
+    .ant-input-number {
+      width: 50%;
+    }
+  }
+
+  .coupon-add__input-sheets--wrapper {
+    right: 151%;
+    margin-top: 45px;
+    .ant-input-number-input {
+      width: 500px;
+    }
+  }
+
+  .coupon-add__ant-form-item {
+    position: relative;
+    left: 15%;
+    .ant-form-item {
+      margin-bottom: 5px;
+    }
+  }
+
+  #product-params-layout__form {
+    .ant-form-item {
+      flex-direction: column;
+    }
+
+    // ref https://github.com/ant-design/ant-design/blob/65ea68843e7b3defe1a3841ab8f587936d5d097a/components/form/style/index.less#L268
+    .ant-form-item-label {
+      text-align: left;
+    }
+
+    .ant-form-item-label label::after {
+      display: none;
+    }
+  }
+}
+
+.viewFormItem {
+  :global {
+    .ant-form-item-label {
+      flex: 0 0 6.333333% !important;
+      max-width: 6.333333% !important;
+    }
+
+    .video-js.vjs-fluid {
+      box-shadow: 0 0 2px rgba(0, 0, 0, 0.15);
+    }
+
+    .vjs-theme-sea .vjs-big-play-button {
+      width: 73px;
+      height: 39px;
+      margin: -20px auto 0 -39.5px;
+      line-height: 39px;
+    }
+  }
+}
+
+.viewWrapper {
+  :global {
+    .ant-card-body .ant-form-item {
+      margin-bottom: 0;
+      // overflow: hidden;
+    }
+  }
+}

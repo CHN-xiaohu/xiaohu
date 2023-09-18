@@ -1,0 +1,113 @@
+@import '~antd/lib/style/themes/default.less';
+
+:global {
+  .ant-form-item-has-error {
+    .ant-upload.ant-upload-select-picture-card {
+      border-color: @error-color;
+    }
+  }
+}
+
+.draggable() {
+  .ant-upload-draggable-list-item {
+    position: relative;
+    height: 100%;
+
+    &::after {
+      position: absolute;
+      top: 0;
+      width: 2px;
+      height: 100%;
+      border: 2px dashed rgba(0, 0, 0, 0);
+      content: '';
+    }
+
+    &.drop-over-downward,
+    &.drop-over-upward {
+      &::after {
+        border-color: @primary-color;
+      }
+    }
+
+    &.drop-over-downward {
+      &::after {
+        right: -6px;
+      }
+    }
+
+    &.drop-over-upward {
+      &::after {
+        left: -6px;
+      }
+    }
+  }
+}
+
+.uploadWrapper {
+  :global {
+    .draggable();
+
+    .ant-upload-picture-card-wrapper {
+      // 用于表单切换时候的占位，避免高度抖动
+      min-height: 112px;
+    }
+
+    .ant-upload.ant-upload-select-picture-card > .ant-upload {
+      flex-direction: column;
+      background-color: #fafafa;
+
+      .ant-upload-text {
+        margin-top: 8px;
+        font-weight: 400 !important;
+      }
+    }
+
+    .upload-file--addon-before {
+      width: 100%;
+      margin-bottom: 12px;
+      color: #666;
+    }
+  }
+}
+
+.warpper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 99;
+  width: 100%;
+  height: 100%;
+  transform: translateX(100%);
+  transition: transform 0.36s cubic-bezier(0.7, 0.3, 0.1, 1);
+
+  .close {
+    margin-top: 16px;
+  }
+
+  :global {
+    .ant-typography {
+      margin: 20px 0;
+    }
+  }
+}
+
+.videoWrapper {
+  position: relative;
+
+  :global {
+    .vjs-theme-sea .vjs-control-bar {
+      height: 2em;
+    }
+
+    .vjs-theme-sea .vjs-button > .vjs-icon-placeholder::before {
+      line-height: 1;
+    }
+  }
+
+  .videoClose {
+    position: absolute;
+    top: -14px;
+    right: -14px;
+    z-index: 999;
+  }
+}

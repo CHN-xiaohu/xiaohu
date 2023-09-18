@@ -1,0 +1,46 @@
+.wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  justify-items: center;
+  width: 302px;
+  min-height: 50px;
+  border: 1px solid #ddd;
+
+  .item {
+    position: relative;
+    box-sizing: border-box;
+    width: 50px;
+    margin: 5px;
+    line-height: 50px;
+    text-align: center;
+    border-radius: 50%;
+
+    .img {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 50px;
+      height: 50px;
+      line-height: 50px;
+      background-color: #ddd;
+      border-radius: 50%;
+    }
+    .title {
+      font-size: 12px;
+      line-height: 20px;
+    }
+  }
+
+  .bubble {
+    position: absolute;
+    top: 0;
+    right: -5px;
+    padding: 3px;
+    color: #fff;
+    line-height: 10px;
+    background-color: red;
+    border-radius: 5px;
+  }
+}

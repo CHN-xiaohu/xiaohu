@@ -1,0 +1,292 @@
+@import '~antd/lib/style/themes/default.less';
+
+@basicBgColor: #fafafa;
+@margin: 24px;
+
+.basicTable {
+  :global {
+    .ant-card-body {
+      padding: 24px;
+      padding-right: 0;
+      padding-left: 0;
+    }
+
+    .ant-table-bordered .ant-table-body>table {
+      border-left: 0;
+    }
+
+    .ant-table-bordered .ant-table-thead>tr>th:last-child,
+    .ant-table-bordered .ant-table-tbody>tr>td:last-child {
+      border-right: 0;
+    }
+
+    .ant-table-bordered.ant-table-empty .ant-table-placeholder {
+      border-right: 0;
+      border-left: 0;
+    }
+  }
+}
+
+.basicInformation {
+  background: @basicBgColor;
+  border: @border-width-base @border-style-base @border-color-split;
+
+  :global {
+    .ant-card-body {
+      padding: 16px 20px;
+    }
+
+    .ant-badge-status-dot {
+      width: 10px;
+      height: 10px;
+    }
+  }
+
+  .sn {
+    display: flex;
+    justify-content: space-between;
+
+    .supplyPad {
+      margin-right: 10px;
+    }
+
+    &>div {
+      &:first-child {
+        display: flex;
+        // flex: 1;
+        width: 35%;
+        color: #333;
+        font-weight: 700;
+      }
+    }
+  }
+
+  .supplierNo {
+    margin-left: -10%;
+  }
+
+  .moneyBox {
+    display: flex;
+    margin-top: 15px;
+
+    .moneyBoxItem {
+      display: flex;
+      align-items: center;
+      margin-right: 24px;
+    }
+
+    .money {
+      color: rgb(255, 102, 0);
+      font-weight: 600;
+    }
+
+    .supplier {
+      margin-left: 31.2%;
+    }
+  }
+
+  .grouopBuy {
+    display: flex;
+    margin-top: 15px;
+    color: rgba(0, 0, 0, 0.65);
+    font-weight: 500;
+    font-size: 14px;
+
+    button {
+      margin-right: 8px;
+    }
+
+    .isPass {
+      margin-right: 50px;
+    }
+  }
+
+  .payType {
+    margin-bottom: 15px;
+  }
+
+  .distributions {
+    margin-left: 13px;
+  }
+}
+
+.customerInformation {
+  margin-top: @margin;
+}
+
+.productInformation {
+  margin-top: @margin;
+
+  .productInformationTitleBox {
+    display: flex;
+    flex-direction: column;
+
+    .productInformationTitleHeader {
+      display: flex;
+    }
+  }
+
+  .productInformationTable {
+    :global {
+      .ant-table-title {
+        background: @table-header-bg;
+        border-right: 0;
+        border-left: 0;
+        border-radius: 0;
+      }
+    }
+
+    margin-bottom: 24px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    .productInformationTitleOrderInfo {
+      display: flex;
+
+      .supplyButton {
+        margin-right: 10px;
+      }
+
+      &>div {
+        flex: 1;
+        text-align: center;
+
+        &:first-child {
+          text-align: left;
+        }
+
+        &:last-child {
+          text-align: right;
+        }
+      }
+    }
+  }
+
+  .productInformationNotParentOrderTable {
+    margin: -25px 0 !important;
+  }
+}
+
+.productInfoPopconfirm {
+  :global {
+    .ant-popover-buttons .ant-btn:first-child {
+      opacity: 0;
+    }
+  }
+}
+
+.otherCard {
+  margin-top: @margin;
+
+  :global {
+    .ant-card-body {
+      padding: 0;
+    }
+
+    .ant-table-bordered.ant-table-empty .ant-table-placeholder {
+      border-right: 0;
+      border-bottom: 0;
+      border-left: 0;
+    }
+  }
+}
+
+.defaultCard {
+  margin-top: @margin;
+}
+
+.headerTable {
+  margin-top: @margin;
+
+  :global {
+    .ant-table-title {
+      background: @table-header-bg;
+      border-right: 0;
+      border-left: 0;
+      border-radius: 0;
+    }
+  }
+}
+
+.supplyOrderDetail {
+  .payLine() {
+    width: 900px;
+    margin-top: 20px;
+    padding-bottom: 20px;
+  }
+
+  .marginTop {
+    margin-top: 20px;
+  }
+
+  .price {
+    color: #f60;
+  }
+
+  .payPrice {
+    color: #ffae34;
+  }
+
+  .wxPay {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    font-size: 16px;
+    border-bottom: solid #f4f4f4 1px;
+
+    .wxPayRadio {
+      position: absolute;
+      left: 85%;
+      display: flex;
+    }
+
+    .payLine();
+  }
+
+  .aliPay {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    font-size: 16px;
+
+    .aliPayRadio {
+      position: absolute;
+      left: 85%;
+      display: flex;
+    }
+
+    .payLine();
+  }
+}
+
+.qrCode {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+  // .payStyle {
+  // }
+
+  .frame {
+    display: inline-block;
+    margin: 15px 0 20px 0;
+    padding: 7px;
+    background: linear-gradient(#efefef, #efefef) left top,
+      linear-gradient(#efefef, #efefef) left top, linear-gradient(#efefef, #efefef) right top,
+      linear-gradient(#efefef, #efefef) right top, linear-gradient(#efefef, #efefef) left bottom,
+      linear-gradient(#efefef, #efefef) left bottom, linear-gradient(#efefef, #efefef) right bottom,
+      linear-gradient(#efefef, #efefef) right bottom;
+    background-repeat: no-repeat;
+    background-size: 2px 25px, 25px 2px;
+  }
+
+  .frameBox {
+    width: 150px;
+    height: 150px;
+  }
+}

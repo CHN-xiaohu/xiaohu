@@ -1,0 +1,3 @@
+msgctxt "上传图片"
+msgid "upload picture"
+msgstr "上传图片"

@@ -1,0 +1,53 @@
+.programa {
+  &-title {
+    &-btn {
+      margin-left: 10px;
+    }
+  }
+  &-detail {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    margin-bottom: 10px;
+    padding: 20px 0;
+    border-top: 1px solid rgb(232, 232, 232);
+
+    &__hide {
+      display: none;
+    }
+
+    :global {
+      .ant-upload-list-item,
+      .ant-upload,
+      .ant-upload-list-picture-card-container {
+        height: 50px;
+      }
+      .ant-form-item .ant-upload {
+        background-color: #fafafa;
+      }
+      .ant-upload-picture-card-wrapper {
+        // 用于表单切换时候的占位，避免高度抖动
+        min-height: 30px;
+      }
+    }
+    &__form {
+      flex: 1;
+      margin-left: 20px;
+    }
+
+    &-table {
+      width: 100%;
+      border-top: 0;
+    }
+
+    &__preview {
+      display: flex;
+      justify-content: center;
+      width: 35%;
+    }
+
+    &-btn {
+      margin-top: 20px;
+    }
+  }
+}

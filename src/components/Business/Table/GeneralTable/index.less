@@ -1,0 +1,60 @@
+@import '~antd/es/style/themes/default.less';
+
+:global {
+  .general-table-class {
+    &.general-table-empty-data {
+      .general-table--content {
+        padding-top: @card-padding-base;
+        padding-bottom: @card-padding-base;
+
+        .general-table--content-header--empty {
+          display: none !important;
+        }
+      }
+    }
+
+    .general-table--content {
+      .general-table--content-header--empty {
+        margin-top: 0 !important;
+        margin-bottom: @card-padding-base - 8px;
+      }
+    }
+  }
+}
+
+.wrapper {
+  background: @layout-body-background;
+
+  .cardWrapper {
+    padding: 8px @card-padding-base;
+  }
+}
+
+.headerWrapper {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+  margin-top: @card-padding-base - 8;
+  margin-bottom: @card-padding-base;
+
+  .headerLeft {
+    .title {
+      flex: 1;
+      color: @label-color;
+      font-size: 16px;
+      line-height: @card-padding-base;
+      opacity: 0.85;
+    }
+  }
+
+  .headerMiddle {
+    flex: auto;
+    margin-right: 32px;
+    margin-left: 40px;
+  }
+
+  .headerRight {
+    width: auto;
+  }
+}

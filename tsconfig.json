@@ -1,0 +1,58 @@
+{
+  "compilerOptions": {
+    "outDir": "build/dist",
+    "module": "esnext",
+    "target": "esnext",
+    // "lib": ["esnext", "dom"],
+    "sourceMap": true,
+    "baseUrl": ".",
+    "jsx": "react-jsx",
+    "allowSyntheticDefaultImports": true,
+    "moduleResolution": "node",
+    "importHelpers": true,
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "noImplicitReturns": true,
+    "suppressImplicitAnyIndexErrors": true,
+    "noUnusedLocals": true,
+    "allowJs": true,
+    "skipLibCheck": true,
+    "experimentalDecorators": true,
+    "strict": true,
+    "plugins": [
+      {
+        "name": "typescript-plugin-css-modules",
+        "options": {
+          "classnameTransform": "camelCase",
+          "customMatcher": "\\.less$",
+          "customRenderer": "node_modules/less-plugin-aliases/lib/customRender.js"
+        }
+      }
+    ],
+    "paths": {
+      "@@/*": ["src/.umi/*"],
+      "@/*": ["src/*"],
+      "@app/*": ["src/*"],
+      "@app_components/*": ["src/components/*"],
+      "@app_business/*": ["src/components/Business/*"],
+      "@app_foundations/*": ["src/foundations/*"],
+      "@app_pages/*": ["src/pages/*"],
+      "@app_utils/*": ["src/utils/*"],
+      "@app_models/*": ["src/models/*"],
+      "@app_services/*": ["src/services/*"],
+      "antd/*": ["node_modules/antd/*"]
+    }
+  },
+  "exclude": [
+    "node_modules",
+    "build",
+    "dist",
+    "scripts",
+    "acceptance-tests",
+    "webpack",
+    "jest",
+    "src/setupTests.ts",
+    "tslint:latest",
+    "tslint-config-prettier"
+  ]
+}

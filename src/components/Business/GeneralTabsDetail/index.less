@@ -1,0 +1,42 @@
+@import '~antd/es/style/themes/default.less';
+
+.wrapper {
+  background: #fff;
+  box-shadow: 1px 0 0 0 @border-color-split, 0 1px 0 0 @border-color-split,
+    1px 1px 0 0 @border-color-split, 1px 0 0 0 @border-color-split inset,
+    0 1px 0 0 @border-color-split inset;
+
+  :global {
+    .ant-tabs-nav .ant-tabs-tab {
+      padding: 18px 30px;
+    }
+
+    .ant-tabs-tabpane {
+      padding: 0;
+    }
+
+    .ant-collapse-borderless {
+      background: transparent;
+    }
+
+    .ant-collapse-borderless
+      > .ant-collapse-item
+      > .ant-collapse-content
+      > .ant-collapse-content-box {
+      padding: 24px;
+      padding-bottom: 0;
+    }
+
+    .tab-detail__collapse .tab-detail__collapse-panel {
+      margin-bottom: 24px;
+      overflow: hidden;
+      background: transparent;
+      border: 0;
+      border-radius: 2px;
+    }
+
+    .ant-collapse-header {
+      background: #f7f7f7;
+    }
+  }
+}

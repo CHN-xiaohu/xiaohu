@@ -1,0 +1,32 @@
+@import '~antd/es/style/themes/default.less';
+
+.wrapper {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-top: 20px;
+  margin-bottom: 8px;
+
+  &.justifyContentFlexEnd {
+    justify-content: flex-end;
+  }
+
+  :global(.ant-tag) {
+    font-size: 13px;
+    cursor: pointer;
+  }
+}
+
+.actions {
+  > span {
+    margin-right: 8px;
+    padding: 0 7px;
+    font-size: 13px;
+    cursor: pointer;
+    user-select: none;
+
+    &:hover {
+      color: @primary-color;
+    }
+  }
+}

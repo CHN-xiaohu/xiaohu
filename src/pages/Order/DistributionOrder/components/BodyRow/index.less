@@ -1,0 +1,65 @@
+@import '~antd/lib/style/themes/default.less';
+
+@orderRowPadding: 12px;
+
+.orderRowWrapper {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin: @orderRowPadding 0;
+  border: @border-width-base @border-style-base @border-color-split;
+  transition: background 0.3s;
+
+  &:hover {
+    background: @table-row-hover-bg;
+  }
+
+  .orderRowItem {
+    display: flex;
+    align-content: center;
+    align-items: center;
+    width: 100%;
+    overflow: hidden;
+
+    :global {
+      .ant-table-cell {
+        display: block;
+      }
+    }
+  }
+
+  // https://github.com/ant-design/ant-design/blob/7715657cf1807907597bc4afbd068984d983a788/components/table/style/index.less#L84
+  .orderRowHeader {
+    justify-content: space-between;
+    width: 100%;
+    padding: @table-padding-vertical @table-padding-horizontal;
+    color: @table-header-color;
+    font-weight: 500;
+    text-align: left;
+    background: @table-header-bg;
+    border-bottom: @border-width-base @border-style-base @border-color-split;
+    transition: background 0.3s ease;
+  }
+
+  .orderRowItemCell {
+    position: relative;
+    padding: @table-padding-vertical @table-padding-horizontal;
+    border-right: @border-width-base @border-style-base rgba(0, 0, 0, 0);
+
+    &::after {
+      position: absolute;
+      top: -50%;
+      right: 0;
+      width: @border-width-base;
+      height: 200%;
+      background-color: @border-color-split;
+      content: '';
+    }
+
+    &:last-child {
+      &::after {
+        width: 0;
+      }
+    }
+  }
+}

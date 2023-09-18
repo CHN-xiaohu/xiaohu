@@ -1,0 +1,36 @@
+@import '~antd/lib/style/themes/index.less';
+
+.wrapper {
+  :global {
+    .ant-col-5 {
+      display: block;
+      flex: 0 0 9.83333333%;
+      max-width: 9.83333333%;
+    }
+  }
+}
+
+.itemWrapper {
+  position: relative;
+  line-height: 32px;
+  zoom: 1;
+
+  .attributeItemName {
+    color: @error-color;
+  }
+
+  .attributeItemValues {
+    position: relative;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 11px 18px 0 18px;
+    background: #f7f7f7;
+    border-radius: 4px;
+
+    :global {
+      .ant-checkbox-group-item {
+        margin-bottom: 17px;
+      }
+    }
+  }
+}

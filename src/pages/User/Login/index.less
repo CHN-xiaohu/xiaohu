@@ -1,0 +1,65 @@
+@import '~antd/es/style/themes/default.less';
+
+.login {
+  width: 380px;
+  margin: 0 auto;
+  background-color: transparent;
+
+  .captchaImage {
+    width: 100%;
+    height: 38px;
+    line-height: 40px;
+    cursor: pointer;
+  }
+
+  .other {
+    width: 100%;
+  }
+
+  .radioGroup {
+    width: 100%;
+    margin-bottom: 38px;
+
+    :global {
+      .ant-form-item-control-input-content {
+        text-align: center;
+      }
+    }
+  }
+
+  .prefixIcon {
+    color: @disabled-color;
+  }
+
+  .kujiale {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+    color: #333;
+    font-weight: 400;
+    font-size: 12px;
+    cursor: pointer;
+
+    .kujialeIcon {
+      margin: 0 5px 0 0;
+    }
+  }
+
+  .kujiale:hover {
+    color: @primary-color;
+  }
+
+  .submit {
+    width: 100%;
+    margin-top: 24px;
+  }
+
+  :global {
+    input:-internal-autofill-selected {
+      color: -internal-light-dark-color(black, white) !important;
+      background-color: rgb(255, 255, 255) !important;
+      background-image: none !important;
+      box-shadow: inset 0 0 0 1000px white !important;
+    }
+  }
+}

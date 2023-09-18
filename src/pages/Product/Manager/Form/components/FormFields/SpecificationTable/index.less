@@ -1,0 +1,65 @@
+.batchSetting {
+  display: flex;
+  margin-top: 35px;
+  margin-bottom: 10px;
+
+  .batchSettingItem {
+    position: relative;
+    margin-left: 15px;
+
+    .batchSettingItemLabel {
+      position: absolute;
+      top: -34px;
+    }
+
+    :global {
+      .ant-input-number {
+        width: 170px;
+      }
+    }
+
+    &:last-child {
+      margin-right: 20px;
+    }
+  }
+
+  .button {
+    margin-left: 25px;
+  }
+}
+
+:global {
+  .sku-table-container {
+    .ant-form-item {
+      margin-top: 24px;
+    }
+
+    .ant-table-tbody > tr > td {
+      padding: 0 10px;
+    }
+
+    .ant-table.ant-table-bordered thead > tr > th {
+      .ant-form-item-required::before {
+        display: inline-block;
+        margin-right: 4px;
+        color: #ff4d4f;
+        font-size: 14px;
+        font-family: SimSun, sans-serif;
+        line-height: 1;
+        content: '*';
+      }
+    }
+
+    .ant-input-number {
+      width: 100%;
+    }
+
+    .ant-form-item-explain {
+      span {
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+      }
+    }
+  }
+}

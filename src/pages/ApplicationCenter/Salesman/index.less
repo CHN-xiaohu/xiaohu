@@ -1,0 +1,71 @@
+@import '~antd/lib/style/themes/default.less';
+
+.recruitPoster {
+  display: flex;
+  flex-direction: column;
+
+  .imgShow {
+    display: flex;
+  }
+
+  .posterItem {
+    width: 50%;
+    height: 450px;
+    img {
+      width: 80%;
+      height: 450px;
+    }
+  }
+
+  .delDiv {
+    position: relative;
+    bottom: 51px;
+    width: 80%;
+    padding: 15px 0;
+    text-align: center;
+    background-color: #ccc;
+    cursor: pointer;
+    opacity: 0.8;
+  }
+
+  .checkboxItem {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    margin-top: 25px;
+    text-align: center;
+
+    .labelColor {
+      margin-top: 10px;
+      color: #1890ff;
+      cursor: pointer;
+    }
+  }
+}
+
+.achievement {
+  margin-bottom: 20px;
+  padding: 20px 10px;
+  border: solid 1px #ccc;
+
+  .iconImg {
+    margin-right: 10px;
+    color: #1890ff;
+  }
+
+  .bottomLine {
+    margin-top: 10px;
+  }
+}
+
+.wrap {
+  :global {
+    .ant-tabs-nav {
+      padding: 0 @card-padding-base;
+    }
+
+    .table-search-from-layout {
+      border-top: none;
+    }
+  }
+}

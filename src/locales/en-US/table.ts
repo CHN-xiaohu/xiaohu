@@ -1,0 +1,18 @@
+export default {
+  'table.toolBar.fullScreen': 'fullScreen',
+  'table.toolBar.exitFullScreen': 'exit fullScreen',
+  'table.toolBar.reload': 'reload',
+  'table.toolBar.columnSetting': 'column setting',
+  'table.toolBar.density': 'density',
+  'table.toolBar.density.larger': 'larger',
+  'table.toolBar.density.middle': 'middle',
+  'table.toolBar.density.small': 'small',
+  'table.toolBar.leftFixedTitle': 'left fixed title',
+  'table.toolBar.rightFixedTitle': 'right fixed title',
+  'table.toolBar.noFixedTitle': 'no fixed title',
+  'table.toolBar.rightPin': 'right pin',
+  'table.toolBar.noPin': 'no pin',
+  'table.toolBar.leftPin': 'left pin',
+  'table.alert.clear': 'clear selectd',
+  'table.alert.delete': 'delete selectd',
+};

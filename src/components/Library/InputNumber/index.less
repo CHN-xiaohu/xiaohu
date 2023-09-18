@@ -1,0 +1,80 @@
+@import '~antd/lib/style/themes/default.less';
+
+.leftBorderRadius {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+.rightBorderRadius {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.wrapper {
+  // display: table;
+  display: flex;
+  align-items: center;
+  font-variant: tabular-nums;
+  border-collapse: separate;
+  border-spacing: 0;
+  font-feature-settings: 'tnum';
+
+  &.existAddonLeft {
+    :global {
+      .ant-input-number {
+        border-top-left-radius: 0;
+        border-bottom-left-radius: 0;
+      }
+    }
+  }
+
+  &.existAddonRight {
+    :global {
+      .ant-input-number {
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 0;
+      }
+    }
+  }
+
+  &.sm {
+    .addonClass {
+      height: @btn-height-sm;
+      font-size: @font-size-sm;
+    }
+  }
+
+  &.lg {
+    .addonClass {
+      height: @btn-height-lg;
+      font-size: @font-size-lg;
+    }
+  }
+
+  .addonClass {
+    position: relative;
+    display: flex;
+    align-items: center;
+    height: 32px;
+    padding: 0 @input-padding-horizontal-base;
+    color: @input-color;
+    font-weight: normal;
+    font-size: @font-size-base;
+    white-space: nowrap;
+    text-align: center;
+    background-color: @input-addon-bg;
+    border: @border-width-base @border-style-base @input-border-color;
+    border-radius: @border-radius-base;
+    transition: all 0.3s;
+
+    &:first-child {
+      border-right: 0;
+      .rightBorderRadius();
+    }
+
+    &:last-child {
+      border-left: 0;
+      .leftBorderRadius();
+    }
+  }
+}

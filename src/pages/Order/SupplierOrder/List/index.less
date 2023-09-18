@@ -1,0 +1,61 @@
+@import '~antd/lib/style/themes/default.less';
+
+@orderRowPadding: 12px;
+
+.orderWrapper {
+  overflow-x: auto;
+  border-left: none !important;
+
+  .productListStyle {
+    padding: 20px 0;
+    border-bottom: solid 1px #f0f0f0;
+
+    .title {
+      margin-left: 10px;
+    }
+
+    &:last-child {
+      border: none !important;
+    }
+  }
+
+  .imgMargin {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .imgs {
+    width: 50px;
+    margin-right: 10px;
+  }
+
+  .customerAddress {
+    text-align: center;
+  }
+
+  :global {
+    .ant-table table {
+      border-radius: 0;
+      border-collapse: collapse;
+    }
+
+    .ant-table thead > tr {
+      border-top: @border-width-base @border-style-base @border-color-split;
+      border-right: @border-width-base @border-style-base @border-color-split;
+      border-left: @border-width-base @border-style-base @border-color-split;
+    }
+
+    .ant-table thead > tr > th {
+      border-right: @border-width-base @border-style-base @border-color-split;
+    }
+
+    .ant-table-tbody > tr:hover:not(.ant-table-expanded-row):not(.ant-table-row-selected) > td {
+      background: none;
+    }
+
+    .ant-badge-status-dot {
+      width: 10px;
+      height: 10px;
+    }
+  }
+}

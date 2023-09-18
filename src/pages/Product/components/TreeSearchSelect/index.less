@@ -1,0 +1,39 @@
+@import '~antd/lib/style/themes/default.less';
+
+.searchTreeWrapper {
+  margin-right: @card-padding-base;
+
+  :global {
+    .ant-card-body {
+      height: 100%;
+      padding: 0;
+    }
+
+    .ant-tree {
+      // position: absolute;
+      width: 100%;
+      padding-left: @card-padding-base / 2;
+    }
+  }
+
+  .searchBox {
+    padding: @card-padding-base;
+  }
+
+  .scrollWrapper {
+    position: relative;
+    width: 100%;
+    // max-height: calc(100% - 88px);
+    margin-top: -14px;
+    // overflow: hidden;
+
+    // &:hover {
+    //   :global {
+    //     .bscroll-vertical-scrollbar {
+    //       // opacity: 1;
+    //       // display: block;
+    //     }
+    //   }
+    // }
+  }
+}

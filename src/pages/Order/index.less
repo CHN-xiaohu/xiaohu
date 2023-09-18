@@ -1,0 +1,49 @@
+@import '~antd/lib/style/themes/default.less';
+
+.productListStyle {
+  padding: 20px 0;
+  border-bottom: solid 1px #f0f0f0;
+
+  .title {
+    margin-left: 10px;
+  }
+
+  &:last-child {
+    border: none !important;
+  }
+}
+
+.add-sn-table {
+  .ant-table-wrapper > .array-table__field--container {
+    width: 380px;
+  }
+}
+
+.addOrderNumWrapper {
+  :global {
+    .ant-list-item {
+      margin-left: 32px;
+    }
+
+    .ant-list-item-meta-title > div {
+      margin-bottom: -24px;
+      font-weight: 400;
+    }
+
+    .ant-col-4 {
+      flex: 0 0 18.66666667%;
+      max-width: 18.66666667%;
+    }
+  }
+}
+
+.supplyCancelTips {
+  color: #000;
+  .tipsSize {
+    margin-bottom: 10px;
+    font-size: 23px;
+  }
+  .mark {
+    color: red;
+  }
+}

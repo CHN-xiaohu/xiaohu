@@ -1,0 +1,103 @@
+.chooseActivityStyle {
+  display: flex;
+  width: 100%;
+
+  &:first-child {
+    margin-left: 0 !important;
+  }
+
+  .emptyItem {
+    position: relative;
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 400px;
+    margin-left: 8px;
+    overflow: hidden;
+    border: 1px solid #ccc;
+
+    button {
+      margin-top: 24px;
+    }
+  }
+
+  .item {
+    position: relative;
+    flex: 1;
+    height: 400px;
+    margin-left: 8px;
+    overflow: hidden;
+
+    img {
+      width: 100%;
+      height: auto;
+    }
+
+    .mask {
+      position: absolute;
+      top: 0;
+      left: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.45);
+      opacity: 0;
+      transition: all 0.3s ease-in-out;
+    }
+
+    &:hover {
+      .mask {
+        opacity: 1;
+      }
+    }
+
+    .buttons {
+      display: flex;
+      flex-direction: column;
+
+      button {
+        margin-bottom: 24px;
+        border: none;
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+    }
+
+    &.active {
+      .mask {
+        opacity: 1;
+      }
+    }
+  }
+}
+
+.preview-page-modal {
+  .ant-modal-body {
+    padding: 0;
+  }
+
+  .ant-modal-content {
+    background-color: transparent;
+    box-shadow: none;
+    width: 288px;
+  }
+
+  .ant-modal-confirm-btns {
+    display: none;
+  }
+
+  .__dumi-default-device-status {
+    background-color: #fff;
+  }
+
+  .__dumi-default-device {
+    margin: 0;
+    padding: 0;
+  }
+}

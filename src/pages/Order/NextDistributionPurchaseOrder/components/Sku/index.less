@@ -1,0 +1,88 @@
+@import '~@/global.less';
+@import '~antd/es/style/themes/default.less';
+
+.sku-body {
+  .ant-btn {
+    color: #999;
+
+    &:focus {
+      border-color: #d9d9d9;
+    }
+  }
+
+  .ant-btn-primary {
+    color: @primary-color !important;
+    text-shadow: none;
+    background-color: transparent;
+    border-color: @primary-color !important;
+  }
+
+  & > .ant-form-item > .ant-form-item-label > label {
+    .ellipsis();
+  }
+}
+
+.nonStandardInput {
+  .ant-form-item-control {
+    max-width: 25% !important;
+  }
+}
+
+.sku-stepper-stock {
+  display: flex;
+  align-items: center;
+
+  .sku__stepper-container {
+    display: flex;
+    align-items: center;
+
+    .stepper {
+      width: 160px;
+    }
+
+    .sku__stepper-suffix {
+      margin-left: 8px;
+    }
+  }
+
+  .sku__stepper-quota {
+    margin-left: 12px;
+  }
+}
+
+.sku-stock {
+  width: 100%;
+
+  .insufficient-stock {
+    margin-left: 10px;
+    color: #f33e3e;
+  }
+
+  .remainder-stock {
+    margin-left: 10px;
+    color: #c3c8cf;
+  }
+}
+
+.sku-actions {
+  margin-top: 24px;
+
+  :global {
+    .ant-btn {
+      width: 150px;
+      margin-right: 24px !important;
+      border-radius: 0;
+
+      & > span {
+        font-weight: 400;
+      }
+    }
+
+    .ant-btn-background-ghost {
+      &:hover {
+        color: #fff;
+        background-color: @primary-color !important;
+      }
+    }
+  }
+}

@@ -1,0 +1,33 @@
+.order-table-wrap {
+  .order-table-row--item-cell {
+    &:nth-child(6),
+    &:nth-child(7) {
+      p {
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+
+  .order-table-header--row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+
+    .ant-typography,
+    .ant-typography p {
+      margin-bottom: 0;
+    }
+
+    & > div:last-child {
+      display: flex;
+      align-items: center;
+
+      .ant-typography {
+        margin-left: 24px;
+      }
+    }
+  }
+}

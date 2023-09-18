@@ -1,0 +1,73 @@
+@import '~antd/lib/style/themes/index.less';
+
+.search {
+  :global {
+    .ant-input {
+      border-color: @input-hover-border-color !important;
+
+      &:hover,
+      &:focus {
+        border-color: @input-hover-border-color !important;
+      }
+
+      &:focus {
+        box-shadow: @input-outline-offset @outline-blur-size @outline-width
+          fade(@input-hover-border-color, 20%) !important;
+      }
+    }
+  }
+}
+
+.columnSelect {
+  position: relative;
+  display: flex;
+  width: 100%;
+  height: 400px;
+  vertical-align: middle;
+  border: @border-width-base @border-style-base @border-color-base;
+  border-radius: @border-radius-base;
+
+  .columnWrapper {
+    border-right: @border-width-base @border-style-base @border-color-base;
+
+    &:last-child {
+      border-right: 0;
+    }
+
+    .columnList {
+      height: 100%;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+
+      .columnListItem {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        min-height: 32px;
+        padding: 6px @control-padding-horizontal;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        transition: all 0.3s;
+
+        > span {
+          padding-right: 0;
+        }
+
+        &-text {
+          padding-left: 8px;
+        }
+
+        &:not(.columnListItemDisabled):hover {
+          background-color: @item-hover-bg;
+          cursor: pointer;
+        }
+
+        &.columnListItemActive {
+          background-color: @item-hover-bg;
+        }
+      }
+    }
+  }
+}

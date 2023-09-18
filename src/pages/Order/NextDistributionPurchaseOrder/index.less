@@ -1,0 +1,137 @@
+@import '~@/global.less';
+@import '~antd/es/style/themes/default.less';
+
+.image {
+  width: 90px;
+  height: 90px;
+  margin-right: 20px;
+  background: #fff;
+  border: 1px solid #e0e2e9;
+  border-radius: 4px;
+}
+
+.product-orderTotal {
+  color: #f33e3e;
+  font-weight: bold;
+  font-size: 18px;
+  font-family: Source Han Sans CN;
+  line-height: 31px;
+  opacity: 1;
+}
+
+.product-info--preview {
+  .product-info--title {
+    color: #33343a;
+    font-weight: 400;
+    font-size: 14px;
+    font-family: Source Han Sans CN;
+    line-height: 24px;
+    opacity: 1;
+  }
+
+  .skuItem {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: auto;
+    max-width: 85%;
+    padding: 6px 8px;
+    color: #999;
+    background-color: rgba(242, 242, 242, 1);
+    border-radius: 2px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+
+    &:hover {
+      background-color: rgba(242, 242, 242, 0.75);
+    }
+
+    .ellipsis {
+      /* 文本强制一行显示 */
+      overflow: hidden;
+      white-space: nowrap;
+
+      /* 溢出部分隐藏 */
+      text-overflow: ellipsis;
+    }
+  }
+
+  .skuMessageForm {
+    margin-top: 12px;
+
+    :global {
+      .ant-row {
+        margin-bottom: 8px;
+      }
+    }
+  }
+}
+
+.list-content {
+  .ant-card-body {
+    padding: 0 !important;
+  }
+
+  .pagination {
+    margin: auto;
+  }
+
+  margin-top: 17px;
+
+  .list {
+    .list-item {
+      padding: 0;
+
+      .produce-img-content {
+        margin: 0 auto 12px;
+        text-align: center;
+
+        .produce-img {
+          width: 100%;
+          height: 166px;
+        }
+      }
+
+      .produce-desc {
+        width: auto;
+        margin: 0 12px 18px 12px;
+        color: #333;
+        font-weight: bold;
+        font-size: 12px;
+        line-height: 18px;
+      }
+
+      .produce-btn {
+        width: 100%;
+        padding: 0 12px 13px;
+      }
+    }
+  }
+}
+
+.ant-back-top {
+  right: 57px !important;
+}
+
+.skuModal {
+  :global {
+    .ant-modal-body {
+      max-height: 65vh;
+      overflow-y: auto;
+    }
+
+    .ant-modal-footer {
+      display: flex;
+      justify-content: center;
+
+      .ant-btn {
+        width: 112px;
+        height: 38px;
+
+        &:first-child {
+          margin-right: 24px;
+        }
+      }
+    }
+  }
+}

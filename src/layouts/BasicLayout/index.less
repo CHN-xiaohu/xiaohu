@@ -1,0 +1,21 @@
+@import '~@/global.less';
+
+.ant-pro-sider .ant-layout-sider-children {
+  .scrollbar();
+
+  ::-webkit-scrollbar-thumb {
+    width: 6px;
+    height: 4px;
+    background: hsla(0, 0%, 100%, 0.2);
+    border-radius: 0;
+    transition: all 0.3s;
+  }
+
+  ::-webkit-scrollbar-track-piece,
+  ::-webkit-scrollbar-track {
+    width: 6px;
+    height: 4px;
+    background: hsla(0, 0%, 100%, 0.15);
+    transition: all 0.3s;
+  }
+}
